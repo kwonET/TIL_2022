@@ -2,7 +2,7 @@
 
 ### Categories
 
-* [CSS](#CSS)
+* [css](#css)
 * [Javascript](#Javascript)
 * [Vue.js](#Vue.js)
 
