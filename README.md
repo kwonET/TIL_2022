@@ -9,8 +9,8 @@
 ---
 
 ### js
-- [js-tutorial](#js/js-tutorial.md)
+- [js-기초](#js/js-tutorial.md)
 
 ### Vue.js
 
-- [Instance-Component](#vue.js/instance-component.md)
+- [인스턴스-컴포넌트](#vue.js/인스턴스-컴포넌트.md)
