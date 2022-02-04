@@ -9,8 +9,8 @@
 ---
 
 ### Javascript
-- [js 기초](#js기초.md)
+- [js 기초](#js/js기초.md)
 
 ### Vue.js
 
-- [인스턴스](#vue기초.md)
+- [인스턴스](#vue.js/인스턴스, 컴포넌트.md)
