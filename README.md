@@ -4,9 +4,12 @@
 
 * [css](#css)
 * [Javascript](#Javascript)
-* [Vue.js](#vue기초.md)
+* [Vue.js](#Vue.js)
 
 ---
+
+### Javascript
+- [js 기초](#js기초.md)
 
 ### Vue.js
 
