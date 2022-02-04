@@ -1,0 +1,93 @@
+# Vue.js 소개
+
+### 기본 구조
+  + DOM <-> View Model <-> Model (js objects)
+    +  DOM Listeners
+    + Data Binding
+
+- HTML 기본
+  + ! tab : html 자동완성
+  + div#app : 태그 이름까지 바로 생성
+  + `document.querySelector()`나 `innerHTML`로 html 태그와 돔을 조절
+
+
+### Reactivity
+  + `Object.defineProperty` : 객체(또는 객체의 속성)의 동작(할당, 접근 등)을 재정의하는 API.
+    ```javascript 
+    Object.defineProperty(대상 객체, 객체의 속성, {
+            정의할 내용
+        })
+    ```
+    + `get: function()` : 속성에 접근했을 때 동작을 정의
+    + `set: function()` : 속성에 값을 할당했을 때 동작을 정의
+  
+
+  + reactivity: 값을 바꿀 때마다 바로 반영이 된다. 데이터의 변화를 라이브러리에서 감지해서 화면에 그려줌.
+- 코드의 라이브러리화
+  + `(function () {})();` : 노출을 피하기 위해 코드를 또다른 유효범위 안에 넣어 관리하는 것.
+
+
+# 인스턴스
+### 인스턴트 생성
++ 생성 시 root 컴포넌트가 됨.
+  ``` vue.js
+  new Vue();
+  ```
+  + 생성자 함수 : 함수를 이용해 객체를 생성, 미리 정의된 함수를 재사용할 수 있는 패턴을 Vue에서도 이용.
+
+    ``` vue.js
+    function Vue(){
+      this.logText=function(){
+        console.log('hello');
+      }
+    }
+    var vm = new Vue();
+    ```
+### 인스턴스 사용
++ 인스턴스 안에서 사용할 수 있는 옵션
+  + `el`
+  + `template`
+  + `data`
+  + `methods`
+  + `created`
+  + `watch`
+
++  생성자 안에 객체를 통째로 넣어줘 태그에 해당 함수를 재사용하는 형태
+    ``` vue.js
+          var vm = new Vue({ 
+              el:'#app', 
+              data:{
+                  message:'hi'
+              }
+          });
+    ```
+
+# 컴포넌트
+
++ 화면의 영역을 구분하여 개발. 각 영역을 컴포넌트라 한다.
+### 전역 컴포넌트
+  + `Vue.component('컴포넌트 이름', 컴포넌트 내용)`와 같은 단독적인 형태로 컴포넌트를 생성
+  + 컴포넌트 태그를 만들고 해당 태그를 컴포넌트로 등록.
+  + 플러그인이나 라이브러리 형태, 전역으로 사용하는 경우에만 사용.
+
+
+### 지역 컴포넌트
+  ```
+  new Vue({
+    el:'#app';
+    components:{
+      '컴포넌트 이름' : 컴포넌트 내용
+    }
+  })
+  ```
+  + 일반적인 경우 지역 컴포넌트 사용.
+
+### 컴포넌트와 인스턴스
++ 인스턴스가 2개이면 root 컴포넌트도 2개가 된다.
++ 지역 컴포넌트는 인스턴스마다 생성해줘야함. (전역은 상관 x)
+
+# 컴포넌트 통신 방식
+### 데이터를 각각 관리하는 컴포넌트
+- 상위 컴포넌트 -> 하위 컴포넌트 [프롭스 속성]
+- 하위 컴포넌트 -> 상위 컴포넌트 [이벤트 발생]
+- 항상 데이터(props)가 내려오고, 데이터(events)가 위로 올라가는 형태를 띄면 데이터를 추적하기 편하다.
