@@ -9,7 +9,7 @@
 ---
 
 ### js
-- [js-기초](#js/js-tutorial.md)
+- [js-기초](#js-tutorial.md)
 
 ### Vue.js
 
