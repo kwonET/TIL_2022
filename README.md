@@ -10,4 +10,4 @@
 
 ### Vue.js
 
-- [activate](Vue.js/active.md)
+- [vue 기초](vue기초.md)
