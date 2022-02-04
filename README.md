@@ -4,10 +4,10 @@
 
 * [css](#css)
 * [Javascript](#Javascript)
-* [Vue.js](#Vue.js)
+* [Vue.js](#vue기초.md)
 
 ---
 
 ### Vue.js
 
-- [vue 기초](vue기초.md)
+- [인스턴스](#vue기초.md)
