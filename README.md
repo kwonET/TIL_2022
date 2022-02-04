@@ -3,12 +3,12 @@
 ### Categories
 
 * [css](#css)
-* [Javascript](#Javascript)
+* [js](#js)
 * [Vue.js](#Vue.js)
 
 ---
 
-### Javascript
+### js
 - [js기초](#js/js기초.md)
 
 ### Vue.js
